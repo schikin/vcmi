@@ -13,11 +13,13 @@
 
 #include "../../lib/FunctionList.h"
 #include "../../lib/GameConstants.h"
+#include "CLobbyScreen.h"
 
 class CMapGenOptions;
 class CToggleButton;
 class CLabel;
 class CLabelGroup;
+class CLobbyScreen;
 
 class RandomMapTab : public CIntObject
 {
@@ -26,6 +28,7 @@ public:
 
 	void updateMapInfoByHost();
 	void setMapGenOptions(std::shared_ptr<CMapGenOptions> opts);
+	void setParent(CLobbyScreen* parent);
 
 	CFunctionList<void(std::shared_ptr<CMapInfo>, std::shared_ptr<CMapGenOptions>)> mapInfoChanged;
 
@@ -35,6 +38,9 @@ private:
 	void deactivateButtonsFrom(CToggleGroup * group, int startId);
 	void validatePlayersCnt(int playersCnt);
 	void validateCompOnlyPlayersCnt(int compOnlyPlayersCnt);
+
+	CLobbyScreen* parent{};
+
 	std::vector<int> getPossibleMapSizes();
 
 

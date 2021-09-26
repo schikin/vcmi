@@ -10,8 +10,10 @@
 #pragma once
 
 #include "CSelectionBase.h"
+#include "RandomMapTemplateTab.h"
 
 class CBonusSelection;
+class RandomMapTemplateTab;
 
 class CLobbyScreen : public CSelectionBase
 {

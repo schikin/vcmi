@@ -59,6 +59,9 @@ CLobbyScreen::CLobbyScreen(ESelectionScreen screenType)
 	{
 		tabOpt = std::make_shared<OptionsTab>();
 		tabRand = std::make_shared<RandomMapTab>();
+		tabRandTemplate = std::make_shared<RandomMapTemplateTab>();
+		tabRandTemplate->setParent(tabRand);
+		tabRand->setParent(this);
 		tabRand->mapInfoChanged += std::bind(&IServerAPI::setMapInfo, CSH, _1, _2);
 		buttonRMG = std::make_shared<CButton>(Point(411, 105), "GSPBUTT.DEF", CGI->generaltexth->zelp[47], 0, SDLK_r);
 		buttonRMG->addCallback([&]()
@@ -112,6 +115,9 @@ void CLobbyScreen::toggleTab(std::shared_ptr<CIntObject> tab)
 		CSH->sendGuiAction(LobbyGuiAction::OPEN_SCENARIO_LIST);
 	else if(tab == tabRand)
 		CSH->sendGuiAction(LobbyGuiAction::OPEN_RANDOM_MAP_OPTIONS);
+    else if(tab == tabRandTemplate)
+        CSH->sendGuiAction(LobbyGuiAction::OPEN_RMG_TEMPLATE);
+
 	CSelectionBase::toggleTab(tab);
 }
 
@@ -202,7 +208,7 @@ void CLobbyScreen::updateAfterStateChange()
 		}
 	}
 	
-	if(curTab == tabRand && CSH->si->mapGenOptions)
+	if((curTab == tabRand || curTab == tabRandTemplate) && CSH->si->mapGenOptions)
 		tabRand->setMapGenOptions(CSH->si->mapGenOptions);
 }
 

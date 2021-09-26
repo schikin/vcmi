@@ -379,7 +379,7 @@ void CObjectClassesHandler::afterLoadFinalization()
 		{
 			obj.second->afterLoadFinalization();
 			if(obj.second->getTemplates().empty())
-				logGlobal->warn("No templates found for %d:%d", entry.first, obj.first);
+				logGlobal->warn("No templates found for %d:%d:%s", entry.first, obj.first, entry.second->identifier);
 		}
 	}
 

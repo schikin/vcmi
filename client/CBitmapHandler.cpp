@@ -37,6 +37,69 @@ enum Epcxformat
 	PCX24B
 };
 
+//TODO: proper streaming would be nice here - loading the whole file in-mem is not good
+SDL_Surface * BitmapHandler::loadBitmapFromMem(std::string fname, ui8* buffer, size_t size, bool setKey) {
+    SDL_Surface * ret=nullptr;
+
+    if (isPCX(buffer))
+    {//H3-style PCX
+        ret = loadH3PCX(buffer, size);
+        if (ret)
+        {
+            if(ret->format->BytesPerPixel == 1  &&  setKey)
+            {
+                CSDL_Ext::setColorKey(ret,ret->format->palette->colors[0]);
+            }
+        }
+        else
+        {
+            logGlobal->error("Failed to open %s as H3 PCX!", fname);
+            return nullptr;
+        }
+    }
+    else
+    { //loading via SDL_Image
+        ret = IMG_Load_RW(
+                //create SDL_RW with our data (will be deleted by SDL)
+                SDL_RWFromConstMem((void*)buffer, (int)size),
+                1); // mark it for auto-deleting
+        if (ret)
+        {
+            if (ret->format->palette)
+            {
+                //set correct value for alpha\unused channel
+                for (int i=0; i < ret->format->palette->ncolors; i++)
+                    ret->format->palette->colors[i].a = SDL_ALPHA_OPAQUE;
+            }
+        }
+        else
+        {
+            logGlobal->error("Failed to open %s via SDL_Image", fname);
+            logGlobal->error("Reason: %s", IMG_GetError());
+            return nullptr;
+        }
+    }
+
+    // When modifying anything here please check two use cases:
+    // 1) Vampire mansion in Necropolis (not 1st color is transparent)
+    // 2) Battle background when fighting on grass/dirt, topmost sky part (NO transparent color)
+    // 3) New objects that may use 24-bit images for icons (e.g. witchking arts)
+    if (ret->format->palette)
+    {
+        CSDL_Ext::setDefaultColorKeyPresize(ret);
+    }
+    else if (ret->format->Amask)
+    {
+        SDL_SetSurfaceBlendMode(ret, SDL_BLENDMODE_BLEND);
+    }
+    else // always set
+    {
+        CSDL_Ext::setDefaultColorKey(ret);
+    }
+    return ret;
+}
+
+
 SDL_Surface * BitmapHandler::loadH3PCX(ui8 * pcx, size_t size)
 {
 	SDL_Surface * ret;
@@ -114,66 +177,9 @@ SDL_Surface * BitmapHandler::loadBitmapFromDir(std::string path, std::string fna
 		return nullptr;
 	}
 
-	SDL_Surface * ret=nullptr;
-
 	auto readFile = CResourceHandler::get()->load(ResourceID(path + fname, EResType::IMAGE))->readAll();
 
-	if (isPCX(readFile.first.get()))
-	{//H3-style PCX
-		ret = loadH3PCX(readFile.first.get(), readFile.second);
-		if (ret)
-		{
-			if(ret->format->BytesPerPixel == 1  &&  setKey)
-			{
-				CSDL_Ext::setColorKey(ret,ret->format->palette->colors[0]);
-			}
-		}
-		else
-		{
-			logGlobal->error("Failed to open %s as H3 PCX!", fname);
-			return nullptr;
-		}
-	}
-	else
-	{ //loading via SDL_Image
-		ret = IMG_Load_RW(
-				  //create SDL_RW with our data (will be deleted by SDL)
-				  SDL_RWFromConstMem((void*)readFile.first.get(), (int)readFile.second),
-				  1); // mark it for auto-deleting
-		if (ret)
-		{
-			if (ret->format->palette)
-			{
-				//set correct value for alpha\unused channel
-				for (int i=0; i < ret->format->palette->ncolors; i++)
-					ret->format->palette->colors[i].a = SDL_ALPHA_OPAQUE;
-			}
-		}
-		else
-		{
-			logGlobal->error("Failed to open %s via SDL_Image", fname);
-			logGlobal->error("Reason: %s", IMG_GetError());
-			return nullptr;
-		}
-	}
-
-	// When modifying anything here please check two use cases:
-	// 1) Vampire mansion in Necropolis (not 1st color is transparent)
-	// 2) Battle background when fighting on grass/dirt, topmost sky part (NO transparent color)
-	// 3) New objects that may use 24-bit images for icons (e.g. witchking arts)
-	if (ret->format->palette)
-	{
-		CSDL_Ext::setDefaultColorKeyPresize(ret);
-	}
-	else if (ret->format->Amask)
-	{
-		SDL_SetSurfaceBlendMode(ret, SDL_BLENDMODE_BLEND);
-	}
-	else // always set
-	{
-		CSDL_Ext::setDefaultColorKey(ret);
-	}
-	return ret;
+	return loadBitmapFromMem(fname, readFile.first.get(), readFile.second, setKey);
 }
 
 SDL_Surface * BitmapHandler::loadBitmap(std::string fname, bool setKey)

@@ -49,6 +49,7 @@ set(client_SRCS
 		lobby/CLobbyScreen.cpp
 		lobby/CSavingScreen.cpp
 		lobby/CScenarioInfoScreen.cpp
+		lobby/RandomMapTemplateTab.cpp
 		lobby/OptionsTab.cpp
 		lobby/RandomMapTab.cpp
 		lobby/SelectionTab.cpp
@@ -124,6 +125,7 @@ set(client_HEADERS
 		lobby/OptionsTab.h
 		lobby/RandomMapTab.h
 		lobby/SelectionTab.h
+		lobby/RandomMapTemplateTab.h
 
 		CBitmapHandler.h
 		CreatureCostBox.h

@@ -15,6 +15,7 @@
 #include "OptionsTab.h"
 #include "RandomMapTab.h"
 #include "SelectionTab.h"
+#include "RandomMapTemplateTab.h"
 
 #include "../../CCallback.h"
 

@@ -31,6 +31,9 @@ void CRmgTemplateStorage::loadObject(std::string scope, std::string name, const 
 void CRmgTemplateStorage::loadObject(std::string scope, std::string name, const JsonNode & data)
 {
 	auto tpl = new CRmgTemplate();
+
+	logGlobal->debug("Loading RMG template %s:%s", scope, name);
+
 	try
 	{
 		JsonDeserializer handler(nullptr, data);

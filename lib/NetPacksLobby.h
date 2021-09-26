@@ -122,7 +122,7 @@ struct LobbyChatMessage : public CLobbyPackToPropagate
 struct LobbyGuiAction : public CLobbyPackToPropagate
 {
 	enum EAction : ui8 {
-		NONE, NO_TAB, OPEN_OPTIONS, OPEN_SCENARIO_LIST, OPEN_RANDOM_MAP_OPTIONS
+		NONE, NO_TAB, OPEN_OPTIONS, OPEN_SCENARIO_LIST, OPEN_RANDOM_MAP_OPTIONS, OPEN_RMG_TEMPLATE
 	} action;
 
 	LobbyGuiAction() : action(NONE) {}

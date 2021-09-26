@@ -15,6 +15,7 @@
 #include "lobby/OptionsTab.h"
 #include "lobby/RandomMapTab.h"
 #include "lobby/SelectionTab.h"
+#include "lobby/RandomMapTemplateTab.h"
 #include "lobby/CBonusSelection.h"
 
 #include "CServerHandler.h"
@@ -90,6 +91,9 @@ void LobbyGuiAction::applyOnLobbyScreen(CLobbyScreen * lobby, CServerHandler * h
 	case OPEN_RANDOM_MAP_OPTIONS:
 		lobby->toggleTab(lobby->tabRand);
 		break;
+	case OPEN_RMG_TEMPLATE:
+	    lobby->toggleTab(lobby->tabRandTemplate);
+	    break;
 	}
 }
 

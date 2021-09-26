@@ -17,6 +17,7 @@ class CTextInput;
 class CAnimImage;
 class CToggleGroup;
 class RandomMapTab;
+class RandomMapTemplateTab;
 class OptionsTab;
 class SelectionTab;
 class InfoCard;
@@ -58,7 +59,8 @@ public:
 	std::shared_ptr<SelectionTab> tabSel;
 	std::shared_ptr<OptionsTab> tabOpt;
 	std::shared_ptr<RandomMapTab> tabRand;
-	std::shared_ptr<CIntObject> curTab;
+    std::shared_ptr<RandomMapTemplateTab> tabRandTemplate;
+    std::shared_ptr<CIntObject> curTab;
 
 	CSelectionBase(ESelectionScreen type);
 	virtual void toggleTab(std::shared_ptr<CIntObject> tab);
