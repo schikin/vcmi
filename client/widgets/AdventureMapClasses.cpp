@@ -23,8 +23,8 @@
 #include "../CMessage.h"
 
 #include "../gui/CGuiHandler.h"
-#include "../gui/SDL_Pixels.h"
-#include "../gui/SDL_Compat.h"
+#include "sdl/Pixels.h"
+#include "sdl/Compat.h"
 
 #include "../widgets/Images.h"
 

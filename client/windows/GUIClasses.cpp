@@ -16,7 +16,7 @@
 #include "CHeroWindow.h"
 #include "CreatureCostBox.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CGameInfo.h"
 #include "../CMessage.h"
 #include "../CMusicHandler.h"
@@ -31,7 +31,7 @@
 #include "../battle/CCreatureAnimation.h"
 
 #include "../gui/CGuiHandler.h"
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "../gui/CCursorHandler.h"
 
 #include "../widgets/CComponent.h"

@@ -12,7 +12,7 @@
 
 #include "CBattleInterface.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CGameInfo.h"
 #include "../CMessage.h"
 #include "../CMusicHandler.h"

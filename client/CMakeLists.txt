@@ -12,8 +12,6 @@ set(client_SRCS
 		gui/CGuiHandler.cpp
 		gui/CIntObject.cpp
 		gui/Fonts.cpp
-		gui/Geometries.cpp
-		gui/SDL_Extensions.cpp
 
 		widgets/AdventureMapClasses.cpp
 		widgets/Buttons.cpp
@@ -54,7 +52,6 @@ set(client_SRCS
 		lobby/RandomMapTab.cpp
 		lobby/SelectionTab.cpp
 
-		CBitmapHandler.cpp
 		CreatureCostBox.cpp
 		CGameInfo.cpp
 		Client.cpp
@@ -84,10 +81,6 @@ set(client_HEADERS
 		gui/CGuiHandler.h
 		gui/CIntObject.h
 		gui/Fonts.h
-		gui/Geometries.h
-		gui/SDL_Compat.h
-		gui/SDL_Extensions.h
-		gui/SDL_Pixels.h
 
 		widgets/AdventureMapClasses.h
 		widgets/Buttons.h
@@ -127,7 +120,6 @@ set(client_HEADERS
 		lobby/SelectionTab.h
 		lobby/RandomMapTemplateTab.h
 
-		CBitmapHandler.h
 		CreatureCostBox.h
 		CGameInfo.h
 		Client.h
@@ -192,7 +184,7 @@ target_include_directories(vcmiclient
 vcmi_set_output_dir(vcmiclient "")
 
 set_target_properties(vcmiclient PROPERTIES ${PCH_PROPERTIES})
-cotire(vcmiclient)
+#cotire(vcmiclient)
 
 install(TARGETS vcmiclient DESTINATION ${BIN_DIR})
 

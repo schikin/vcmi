@@ -1,5 +1,5 @@
 /*
- * SDL_Compat.h, part of VCMI engine
+ * Compat.h, part of VCMI engine
  *
  * Authors: listed in file AUTHORS in main folder
  *

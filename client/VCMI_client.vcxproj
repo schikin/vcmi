@@ -270,7 +270,6 @@
     <ClInclude Include="gui\CIntObject.h" />
     <ClInclude Include="gui\Fonts.h" />
     <ClInclude Include="gui\Geometries.h" />
-    <ClInclude Include="gui\SDL_Compat.h" />
     <ClInclude Include="gui\SDL_Extensions.h" />
     <ClInclude Include="gui\SDL_Pixels.h" />
     <ClInclude Include="lobby\CBonusSelection.h" />

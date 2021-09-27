@@ -21,6 +21,9 @@ set(lib_SRCS
 		battle/SiegeInfo.cpp
 		battle/Unit.cpp
 
+		sdl/Extensions.cpp
+		sdl/Geometries.cpp
+
 		events/ApplyDamage.cpp
 		events/GameResumed.cpp
 		events/ObjectVisitEnded.cpp
@@ -131,6 +134,7 @@ set(lib_SRCS
 
 		vstd/StringUtils.cpp
 
+		CBitmapHandler.cpp
 		CAndroidVMHelper.cpp
 		CArtHandler.cpp
 		CBonusTypeHandler.cpp
@@ -233,6 +237,11 @@ set(lib_HEADERS
 		events/ObjectVisitStarted.h
 		events/PlayerGotTurn.h
 		events/TurnStarted.h
+
+		sdl/Compat.h
+		sdl/Extensions.h
+		sdl/Geometries.h
+		sdl/Pixels.h
 
 		filesystem/AdapterLoaders.h
 		filesystem/CArchiveLoader.h
@@ -339,6 +348,7 @@ set(lib_HEADERS
 		spells/effects/Sacrifice.h
 
 		AI_Base.h
+		CBitmapHandler.h
 		CAndroidVMHelper.h
 		CArtHandler.h
 		CBonusTypeHandler.h
@@ -398,7 +408,7 @@ assign_source_group(${lib_SRCS} ${lib_HEADERS})
 add_library(vcmi SHARED ${lib_SRCS} ${lib_HEADERS})
 set_target_properties(vcmi PROPERTIES COMPILE_DEFINITIONS "VCMI_DLL=1")
 target_link_libraries(vcmi PUBLIC
-		${MINIZIP_LIBRARIES} ${SDL2_LIBRARY} ${ZLIB_LIBRARIES}
+		${MINIZIP_LIBRARIES} ${SDL2_LIBRARY} ${SDL2_IMAGE_LIBRARY} ${ZLIB_LIBRARIES}
 		${SYSTEM_LIBS} ${Boost_LIBRARIES}
 )
 

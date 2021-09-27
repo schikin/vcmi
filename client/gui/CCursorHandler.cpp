@@ -12,7 +12,7 @@
 
 #include <SDL.h>
 
-#include "SDL_Extensions.h"
+#include "../gui/SDL_Extensions.h"
 #include "CGuiHandler.h"
 #include "../widgets/Images.h"
 

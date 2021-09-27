@@ -9,7 +9,7 @@
 
 #include <../lib/filesystem/CArchiveLoader.h>
 #include <../lib/filesystem/CInputStream.h>
-#include <../client/CBitmapHandler.h>
+#include <../lib/CBitmapHandler.h>
 #include <SDL2/SDL.h>
 
 using namespace std;
@@ -47,7 +47,7 @@ int unpack(boost::filesystem::path archive, const boost::filesystem::path& dir) 
 
 
         if(res.getType() == EResType::IMAGE) {
-            auto surface = BitmapHandler::loadBitmapFromMem(resName, pair.first.get(), pair.second);
+            auto surface = BitmapHandler::loadBitmapFromMem(resName.c_str(), (ui8*)pair.first.get(), (size_t)pair.second);
 
             SDL_SaveBMP(surface, targetFilePath.c_str());
         } else {

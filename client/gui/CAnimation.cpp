@@ -12,10 +12,11 @@
 
 #include <SDL_image.h>
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../Graphics.h"
 #include "../gui/SDL_Extensions.h"
-#include "../gui/SDL_Pixels.h"
+#include "sdl/Extensions.h"
+#include "sdl/Pixels.h"
 
 #include "../lib/filesystem/Filesystem.h"
 #include "../lib/filesystem/ISimpleResourceLoader.h"

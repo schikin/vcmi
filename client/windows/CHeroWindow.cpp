@@ -15,14 +15,14 @@
 #include "CKingdomInterface.h"
 #include "GUIClasses.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CGameInfo.h"
 #include "../CMessage.h"
 #include "../CMT.h"
 #include "../CPlayerInterface.h"
 #include "../Graphics.h"
 
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "../gui/CGuiHandler.h"
 #include "../gui/CAnimation.h"
 #include "../widgets/MiscWidgets.h"

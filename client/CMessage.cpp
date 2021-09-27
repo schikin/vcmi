@@ -12,7 +12,7 @@
 #include "CMessage.h"
 
 #include "CGameInfo.h"
-#include "gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "../lib/CGeneralTextHandler.h"
 #include "CBitmapHandler.h"
 #include "gui/CAnimation.h"

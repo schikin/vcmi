@@ -29,7 +29,7 @@
 #include "mapHandler.h"
 #include "windows/GUIClasses.h"
 #include "../lib/CConfigHandler.h"
-#include "gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "battle/CBattleInterface.h"
 #include "../lib/mapping/CCampaignHandler.h"
 #include "../lib/CGameState.h"

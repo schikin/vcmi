@@ -10,7 +10,7 @@
 #include "StdInc.h"
 #include "InfoWindows.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../Graphics.h"
 #include "../CGameInfo.h"
 #include "../CPlayerInterface.h"
@@ -21,8 +21,8 @@
 #include "../widgets/CComponent.h"
 #include "../widgets/MiscWidgets.h"
 
-#include "../gui/SDL_Pixels.h"
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Pixels.h"
+#include "sdl/Extensions.h"
 #include "../gui/CGuiHandler.h"
 #include "../gui/CCursorHandler.h"
 

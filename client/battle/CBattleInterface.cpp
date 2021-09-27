@@ -14,7 +14,7 @@
 #include "CBattleInterfaceClasses.h"
 #include "CCreatureAnimation.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CGameInfo.h"
 #include "../CMessage.h"
 #include "../CMT.h"
@@ -25,6 +25,7 @@
 #include "../gui/CAnimation.h"
 #include "../gui/CCursorHandler.h"
 #include "../gui/CGuiHandler.h"
+#include "sdl/Extensions.h"
 #include "../gui/SDL_Extensions.h"
 #include "../windows/CAdvmapInterface.h"
 #include "../windows/CCreatureWindow.h"

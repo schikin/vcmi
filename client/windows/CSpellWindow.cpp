@@ -27,7 +27,7 @@
 #include "../battle/CBattleInterface.h"
 #include "../gui/CAnimation.h"
 #include "../gui/CGuiHandler.h"
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "../widgets/MiscWidgets.h"
 #include "../widgets/CComponent.h"
 #include "../widgets/TextControls.h"

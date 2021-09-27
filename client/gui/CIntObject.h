@@ -10,7 +10,7 @@
 #pragma once
 
 #include <SDL_events.h>
-#include "Geometries.h"
+#include "sdl/Geometries.h"
 #include "../Graphics.h"
 
 struct SDL_Surface;

@@ -22,7 +22,7 @@
 #include "../CGameInfo.h"
 #include "../CPlayerInterface.h"
 #include "../CMessage.h"
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CMusicHandler.h"
 #include "../CVideoHandler.h"
 #include "../CPlayerInterface.h"

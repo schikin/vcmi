@@ -168,12 +168,8 @@
 		<Unit filename="gui/CIntObject.h" />
 		<Unit filename="gui/Fonts.cpp" />
 		<Unit filename="gui/Fonts.h" />
-		<Unit filename="gui/Geometries.cpp" />
-		<Unit filename="gui/Geometries.h" />
-		<Unit filename="gui/SDL_Compat.h" />
 		<Unit filename="gui/SDL_Extensions.cpp" />
 		<Unit filename="gui/SDL_Extensions.h" />
-		<Unit filename="gui/SDL_Pixels.h" />
 		<Unit filename="lobby/CBonusSelection.cpp" />
 		<Unit filename="lobby/CBonusSelection.h" />
 		<Unit filename="lobby/CLobbyScreen.cpp" />

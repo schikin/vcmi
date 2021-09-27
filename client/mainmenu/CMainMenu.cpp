@@ -20,7 +20,7 @@
 #include "../../lib/filesystem/Filesystem.h"
 #include "../../lib/filesystem/CCompressedStream.h"
 
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "../gui/CCursorHandler.h"
 
 #include "../CGameInfo.h"
@@ -37,7 +37,7 @@
 #include "../CPlayerInterface.h"
 #include "../../CCallback.h"
 #include "../CMessage.h"
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../Client.h"
 #include "../gui/CGuiHandler.h"
 #include "../gui/CAnimation.h"

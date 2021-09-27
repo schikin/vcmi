@@ -23,7 +23,7 @@
 #include "../gui/CAnimation.h"
 #include "../gui/CCursorHandler.h"
 #include "../gui/CGuiHandler.h"
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 
 #include "../../CCallback.h"
 #include "../../lib/CStack.h"

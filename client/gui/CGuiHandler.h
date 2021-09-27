@@ -10,8 +10,8 @@
 #pragma once
 
 //#include "../../lib/CStopWatch.h"
-#include "Geometries.h"
-#include "SDL_Extensions.h"
+#include "sdl/Geometries.h"
+#include "sdl/Extensions.h"
 
 class CFramerateManager;
 class CGStatusBar;

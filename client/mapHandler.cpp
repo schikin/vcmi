@@ -13,7 +13,7 @@
 
 #include "CBitmapHandler.h"
 #include "gui/CAnimation.h"
-#include "gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "CGameInfo.h"
 #include "../lib/mapObjects/CGHeroInstance.h"
 #include "../lib/mapObjects/CObjectClassesHandler.h"

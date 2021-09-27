@@ -16,7 +16,7 @@
 
 #include <vcmi/scripting/Service.h>
 
-#include "gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "CGameInfo.h"
 #include "mapHandler.h"
 

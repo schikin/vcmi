@@ -10,7 +10,7 @@
 #pragma once
 
 #include "../../lib/vcmi_endian.h"
-#include "Geometries.h"
+#include "sdl/Geometries.h"
 #include "../../lib/GameConstants.h"
 
 #ifdef IN

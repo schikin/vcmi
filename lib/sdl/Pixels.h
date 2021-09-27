@@ -11,7 +11,7 @@
 
 #include <SDL_endian.h>
 
-#include "SDL_Extensions.h"
+#include "Extensions.h"
 
 // for accessing channels from pixel in format-independent way
 //should be as fast as accessing via pointer at least for 3-4 bytes per pixel

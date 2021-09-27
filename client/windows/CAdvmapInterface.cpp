@@ -17,7 +17,7 @@
 #include "GUIClasses.h"
 #include "CTradeWindow.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CGameInfo.h"
 #include "../CMessage.h"
 #include "../CMusicHandler.h"
@@ -32,7 +32,7 @@
 #include "../gui/CAnimation.h"
 #include "../gui/CCursorHandler.h"
 #include "../gui/CGuiHandler.h"
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "../widgets/MiscWidgets.h"
 #include "../windows/InfoWindows.h"
 

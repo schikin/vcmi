@@ -11,7 +11,7 @@
 
 #include "gui/Fonts.h"
 #include "../lib/GameConstants.h"
-#include "gui/Geometries.h"
+#include "../lib/sdl/Geometries.h"
 
 struct SDL_Surface;
 class CGHeroInstance;

@@ -13,14 +13,14 @@
 #include "MiscWidgets.h"
 
 #include "../gui/CAnimation.h"
-#include "../gui/SDL_Pixels.h"
+#include "sdl/Pixels.h"
 #include "../gui/CGuiHandler.h"
 #include "../gui/CCursorHandler.h"
 
 #include "../battle/CBattleInterface.h"
 #include "../battle/CBattleInterfaceClasses.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../Graphics.h"
 #include "../CGameInfo.h"
 #include "../CPlayerInterface.h"

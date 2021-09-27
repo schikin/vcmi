@@ -24,7 +24,7 @@
 #include "windows/CQuestLog.h"
 #include "CMessage.h"
 #include "CPlayerInterface.h"
-#include "gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "widgets/CComponent.h"
 #include "windows/CTradeWindow.h"
 #include "windows/CSpellWindow.h"

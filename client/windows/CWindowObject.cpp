@@ -12,15 +12,15 @@
 
 #include "../widgets/MiscWidgets.h"
 
-#include "../gui/SDL_Pixels.h"
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Pixels.h"
+#include "sdl/Extensions.h"
 #include "../gui/CGuiHandler.h"
 #include "../gui/CCursorHandler.h"
 
 #include "../battle/CBattleInterface.h"
 #include "../battle/CBattleInterfaceClasses.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../Graphics.h"
 #include "../CGameInfo.h"
 #include "../CPlayerInterface.h"

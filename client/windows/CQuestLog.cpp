@@ -12,13 +12,13 @@
 
 #include "CAdvmapInterface.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CGameInfo.h"
 #include "../CPlayerInterface.h"
 #include "../Graphics.h"
 
 #include "../gui/CGuiHandler.h"
-#include "../gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "../widgets/CComponent.h"
 
 #include "../../CCallback.h"

@@ -11,7 +11,7 @@
 #include "CIntObject.h"
 
 #include "CGuiHandler.h"
-#include "SDL_Extensions.h"
+#include "../gui/SDL_Extensions.h"
 #include "../CMessage.h"
 
 IShowActivatable::IShowActivatable()

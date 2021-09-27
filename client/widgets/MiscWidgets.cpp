@@ -15,7 +15,7 @@
 #include "../gui/CGuiHandler.h"
 #include "../gui/CCursorHandler.h"
 
-#include "../CBitmapHandler.h"
+#include "CBitmapHandler.h"
 #include "../CPlayerInterface.h"
 #include "../CMessage.h"
 #include "../CGameInfo.h"

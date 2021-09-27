@@ -20,7 +20,7 @@
 
 #include "../lib/filesystem/Filesystem.h"
 #include "../lib/filesystem/CBinaryReader.h"
-#include "gui/SDL_Extensions.h"
+#include "sdl/Extensions.h"
 #include "gui/CAnimation.h"
 #include <SDL_ttf.h>
 #include "../lib/CThreadHelper.h"
